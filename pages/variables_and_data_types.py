@@ -9,29 +9,29 @@ x = st.button("Press me")
 
 what_type_is_it(x)
 
-y = st.checkbox("Check me")
+x = st.checkbox("Check me")
 
-what_type_is_it(y)
+what_type_is_it(x)
 
-z = st.number_input("Enter something")
+x = st.number_input("Enter something")
 
-what_type_is_it(z)
+what_type_is_it(x)
 
-a = st.number_input("Enter something", value=3)
+x = st.number_input("Enter something", value=3)
 
-what_type_is_it(a)
+what_type_is_it(x)
 
-b = st.text_input("Enter something", value="Hi")
+x = st.text_input("Enter something", value="Hi")
 
-what_type_is_it(b)
+what_type_is_it(x)
 
-c = st.multiselect(
+x = st.multiselect(
     "What are your favorite colors",
     ["Green", "Yellow", "Red", "Blue"],
     ["Yellow", "Red"],
 )
 
-what_type_is_it(c)
+what_type_is_it(x)
 
 st.write("""
 Your assignment:
@@ -43,3 +43,5 @@ types of variable comes out of each one.
          
 Hint: use `what_type_is_it()`
 """)
+
+# PUT YOUR CODE BELOW THIS:
