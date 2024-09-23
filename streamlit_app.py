@@ -7,10 +7,19 @@ st.write(
 
 st.write("Hi, class")
 
-st.write("""
+st.audio("purr.mp3")
+
+st.write(
+"""
 This is a very long line of text
          
 It has lots of stuff
-""")
+* 1
+* 2
+* 3
 
-st.audio("purr.mp3")
+# :red[hi]
+
+## :rainbow[rainbow]
+"""
+)
