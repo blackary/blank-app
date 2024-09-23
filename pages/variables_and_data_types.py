@@ -42,6 +42,8 @@ Pick two more input widgets and add them to this page, and see what
 types of variable comes out of each one.
          
 Hint: use `what_type_is_it()`
+         
+What would you use that input for?
 """)
 
 # PUT YOUR CODE BELOW THIS:
