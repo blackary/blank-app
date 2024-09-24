@@ -47,3 +47,7 @@ What would you use that input for?
 """)
 
 # PUT YOUR CODE BELOW THIS:
+
+x = st.time_input("Enter the time")
+
+what_type_is_it(x)
