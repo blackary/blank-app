@@ -22,3 +22,4 @@ full_name = st.text_input("What is your full name?")
 st.subheader("Student info")
 st.write("Full name:", full_name)
 st.write("Age:", )
+
