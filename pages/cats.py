@@ -2,7 +2,8 @@
 import streamlit as st
 import requests
 
-response = requests.get("https://pokeapi.co/api/v2/pokemon/1/")
+number = st.slider("Pick a pokemon", 1, 122)
+response = requests.get(f"https://pokeapi.co/api/v2/pokemon/{number}/")
 
 st.image(response.json()["sprites"]["other"]["showdown"]["front_default"])
 
