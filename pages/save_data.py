@@ -9,7 +9,7 @@ def save_data(name, data):
 def get_data(name):
     with SqliteDict("example.sqlite") as db:
         return db[name]
-
+    
 
 name = st.text_input("Data name")
 
@@ -22,3 +22,4 @@ if st.button("Save"):
 if st.button("Load"):
     st.toast(f"Loading data `{name}`")
     st.write(get_data(name))
+    
