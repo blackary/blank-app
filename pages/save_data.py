@@ -10,9 +10,11 @@ def get_data(name):
     with SqliteDict("example.sqlite") as db:
         return db[name]
     
+st.write("Where do you want to save the data?")
 
-name = st.text_input("Data name")
+name = st.text_input("Save data as:")
 
+st.write("What data do you want to save?")
 numbers = st.data_editor([1, 2, 3, 4, 5], num_rows='dynamic')
 
 if st.button("Save"):
