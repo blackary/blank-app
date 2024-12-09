@@ -8,20 +8,24 @@ def save_data(name, data):
 
 def get_data(name):
     with SqliteDict("example.sqlite") as db:
-        return db[name]
+        try:
+            return db[name]
+        except KeyError:
+            st.error(f"Data named {name} not found")
     
-st.write("Where do you want to save the data?")
+name = st.text_input("What's the name of the data?")
 
-name = st.text_input("Save data as:")
+save, load = st.tabs(["Save data", "Load data"])
 
-st.write("What data do you want to save?")
-numbers = st.data_editor([1, 2, 3, 4, 5], num_rows='dynamic')
+with save:
+    st.write("Data to save:")
+    numbers = st.data_editor([1, 2, 3, 4, 5], num_rows='dynamic')
 
-if st.button("Save"):
-    save_data(name, numbers)
-    st.toast(f"Data saved to `{name}`")
+    if st.button("Save"):
+        save_data(name, numbers)
+        st.toast(f"Data saved to `{name}`")
 
-if st.button("Load"):
-    st.toast(f"Loading data `{name}`")
-    st.write(get_data(name))
-    
+with load:
+    if st.button("Load"):
+        st.toast(f"Loading data `{name}`")
+        st.write(get_data(name))
