@@ -12,6 +12,7 @@ def get_data(name):
             return db[name]
         except KeyError:
             st.error(f"Data named {name} not found")
+            return None
     
 name = st.text_input("What's the name of the data?")
 
