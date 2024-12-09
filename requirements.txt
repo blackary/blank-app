@@ -1,3 +1,4 @@
 streamlit
 pyjokes
 requests
+sqlitedict
