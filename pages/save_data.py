@@ -13,8 +13,10 @@ def get_data(name):
 
 name = st.text_input("Data name")
 
+numbers = st.data_editor([1, 2, 3, 4, 5], num_rows='dynamic')
+
 if st.button("Save"):
-    save_data(name, [1, 2, 3, 4])
+    save_data(name, numbers)
     st.toast(f"Data saved to `{name}`")
 
 if st.button("Load"):
